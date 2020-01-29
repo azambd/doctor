@@ -50,9 +50,9 @@ class DoctorReviewSpider(scrapy.Spider):
             l.add_value('ratings', ratings)
             l.add_value('review_date', review_date)
             l.add_value('hash_key', hash_key)
-            print('\n\n\n', l.load_item())
+            # print('\n\n\n', l.load_item())
 
-            l.load_item()
+            yield(l.load_item())
 
             print('\n\n')
             # yield {'Physician Name': physician_name,
